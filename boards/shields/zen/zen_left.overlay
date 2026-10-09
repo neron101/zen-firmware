@@ -1,6 +1,8 @@
 #include "zen.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+/* DYA Studio: 共通スニペットが参照するランタイム入力プロセッサ定義 */
+#include <input/processors/runtime-input-processor.dtsi>
 
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
