@@ -51,6 +51,7 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&mouse_runtime_input_processor>,
             <&zip_temp_layer 1 500>;
 
         scroller {
@@ -70,6 +71,7 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&mouse_runtime_input_processor>,
             <&zip_temp_layer 1 500>;
 
         scroller {
@@ -88,6 +90,7 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&mouse_runtime_input_processor>,
             <&zip_temp_layer 1 500>;
 
         scroller {
