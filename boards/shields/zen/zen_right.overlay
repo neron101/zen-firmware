@@ -1,10 +1,14 @@
 #include "zen.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+/* DYA Studio: トラボ速度をStudioから変更可能に */
+#include <input/processors/runtime-input-processor.dtsi>
+#include <behaviors/battery_history_request.dtsi>
 
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&mouse_runtime_input_processor>,
         <&zip_temp_layer 1 500>;
 
     scroller {
