@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
     - name: kot149
@@ -11,9 +13,10 @@ manifest:
     - name: badjeff
       url-base: https://github.com/badjeff
   projects:
+    # ZMK本体（DYA Studio対応 cormoran版 v0.3）
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
+      remote: cormoran
+      revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
@@ -34,5 +37,18 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
+    # DYA Studio用モジュール（v0.3対応版）
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: zmk-v0.3.0.0
   self:
     path: config
